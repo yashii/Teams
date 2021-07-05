@@ -1,0 +1,25 @@
+{
+  "name": "teams",
+  "version": "1.0.0",
+  "description": "teams is a video conferencing app",
+  "main": "src/app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "scripts": {
+    "watch": "nodemon --watch \"src/\" --exec \"node src/app.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "teams",
+    "microsoft teams clone",
+    "video conferencing app"
+  ],
+  "author": "Yashi Shrivastava",
+  "license": "ISC"
+}
