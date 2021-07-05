@@ -1,0 +1,466 @@
+.chat-col{
+    right: -100vw;
+    bottom: 0;
+    top: 0px;
+    z-index: 1000;
+    position: relative;
+    color: #fff;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 40px;
+    padding-top: 15px;
+    min-height: 100vh;
+}
+
+.chat-col.chat-opened {
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease !important;
+    -webkit-transition: all 0.3s ease !important;
+    -moz-transition: all 0.3s ease !important;
+}
+
+#chat-messages{
+    height: 70vh;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;
+}
+#foot{
+    margin: auto;
+    padding: 5px;
+    width: 28%;
+    border-top-right-radius : 8px;
+    border-top-left-radius : 8px;
+
+}
+.chat-box{
+    bottom: 0px;
+    right: 0;
+    position:relative;
+    border: 0;
+    border-top: 1px groove white;
+    border-left: 1px groove white;
+    font-size: large;
+}
+
+.chat-box::placeholder{
+    font-size: small;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.chat-box,
+.chat-box:focus{
+    resize: none !important;
+    box-shadow: none !important;
+}
+
+.chat-row{
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.main{
+    padding-top: 150px;
+}
+
+
+.remote-video{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0);
+    max-height: 50vh;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.remote-video-controls{
+    position:absolute;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index:300000;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    visibility: hidden;
+}
+
+
+.remote-video:hover + .remote-video-controls,
+.remote-video-controls:hover{
+    visibility: visible;
+}
+
+
+.local-video{
+    bottom: 10px;
+    left: 0;
+    position: absolute;
+    width:15vw;
+    border-radius: 10px;
+   
+}
+
+
+.mirror-mode{
+    -ms-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+
+.sender-info{
+    font-size: smaller;
+    margin-top: 12px;
+    align-self: flex-end;
+}
+
+
+.msg{
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    background-color: wheat;
+}
+
+
+.chat-card{
+    border-radius: 6px;
+}
+
+
+.btn-no-effect:focus{
+    box-shadow: none;
+}
+
+.very-small{
+    font-size: 6px !important;
+}
+
+
+#close-single-peer-btn {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    border-radius: 0%;
+    z-index: 100;
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+.record-option{
+   /* height: 200px;
+    border-radius: 10%;
+    border: 1px solid #200d35;
+    cursor: pointer;
+    padding: 10px;
+    vertical-align: middle;*/
+      background: rgba(150, 39, 234, 1);
+      color: white;
+      border:none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 145px;
+  height: 45px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.record-option:hover {
+  background-color: #200d35;
+  color: white;
+}
+
+.custom-modal {
+ 
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.bg-dark {
+    background-color: #200d35!important;
+}
+
+.custom-modal-content {
+    /*background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #200d35;
+    width: 80%;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 150px;
+    background: white;
+    border-radius: 20px;
+    /*position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;*/
+}
+
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+@media only screen and (max-width:767px){
+    .chat-col{
+        right: -100vw;
+        width: 100vw;
+        z-index: 99999;
+        transition: 0.3s;
+        top: 47px;
+    }
+  
+    .chat-opened::-webkit-scrollbar {
+        display: none;
+    }
+
+    #chat-messages{
+        height: 60vh;
+    }
+
+    .chat-box{
+        bottom: 90px;
+        margin-bottom: 0px;
+    }
+    
+    .card-sm{
+        max-width: 100%;
+        min-width: 50%;
+    }
+
+
+    .local-video{
+        width:40vw;
+    }
+}
+
+
+@media (min-width:740px){
+    .card{
+        width: 50%;
+        z-index: 1000;;
+
+    }
+}
+html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#190b25, #dcd0f3);
+  }
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #10191a;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box button {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  .zoom {
+    padding: 50px;
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  #videos .card {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    object-fit: fit;
+}
+#chat-pane{
+    position:absolute;
+    height: 400px;
+    width: 400px;
+    z-index: 10000;
+}
