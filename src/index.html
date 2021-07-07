@@ -21,8 +21,11 @@
 
     <body>
 
-        
-        <div class="fixed-top bg-dark text-white text-center"><h1 style="display: inline;">Teams </h1><h3 style="display: inline;">a collaborative experience</h3></div>
+    
+
+        <div class="fixed-top text-center" id="t"><img src="https://i.imgur.com/caRtBlf.png" class="logo" alt="logo">
+            <h1 style="display:inline;"> Teams </h1>
+            </div>
 
             <div class="custom-modal" id='recording-options-modal'>
                 <div class="custom-modal-content">
@@ -44,6 +47,7 @@
             </div>
             
         <div class="container-fluid" id='room-create' hidden>
+
             <div class="login-box">
                 <h2>Create Room</h2>
                 <form>
@@ -158,7 +162,6 @@
                 </div>
             </div>  
         </div>
-        </div>
         <div class="fixed-bottom bg-dark rounded-8px text-center fa-pull-right room-comm " hidden id='foot'>
                      <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-video' title="Hide Video">
                     <i class="fa fa-video text-white fa-3x"></i>
@@ -186,6 +189,19 @@
                     <a href="/" class="text-white text-decoration-none"><i class="fa fa-sign-out-alt text-white fa-3x" title="Leave"></i></a>
                 </button>
             </div>
-        </div>
+            <div class="fixed-bottom" style="z-index: -1000;">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+                </svg>
+                </div>
     </body>
 </html>
