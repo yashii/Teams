@@ -1,4 +1,6 @@
 # Teams: A collaborative experience
+![teams-video-app](https://i.imgur.com/WI4Qing.png)
+
 Run this project locally by executing:
 ```node src/app.js ```
 
