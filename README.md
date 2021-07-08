@@ -1,7 +1,8 @@
 # Teams: A collaborative experience
-Run this project locally with **node src/app.js** 
+Run this project locally by running:
+```**node src/app.js** ```
 
-Try out the app [Teams](#)
+Try out the app -> [Teams](#)
 
 ## Project build for Microsoft Engage 2021 Program
 
