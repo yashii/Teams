@@ -1,5 +1,5 @@
 # Teams: A collaborative experience
-Run this project locally by running:
+Run this project locally by executing:
 ```node src/app.js ```
 
 Try out the app -> [Teams](#)
